@@ -14,7 +14,7 @@ RUN useradd -m codespace && \
     
 USER codespace
 # Install Julia packages
-RUN julia -e 'using Pkg; Pkg.add(["LaMEM", "GeophysicalModelGenerator", "Plots", "PolygonOps", "GEOPArams"])'
+RUN julia -e 'using Pkg; Pkg.add(["LaMEM", "GeophysicalModelGenerator", "Plots", "PolygonOps", "GeoParams"])'
 
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
