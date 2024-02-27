@@ -18,7 +18,7 @@ RUN curl -Lo install.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
     rm install.sh
 
 # Install Julia packages
-RUN julia -e 'using Pkg; Pkg.add(["Plots", "PolygonOps"])'
+RUN julia -e 'using Pkg; Pkg.add(["LaMEM", "GeophysicalModelGenerator", "Plots", "PolygonOps"])'
 
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
