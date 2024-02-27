@@ -16,7 +16,8 @@ RUN curl -Lo install.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
     chmod +x install.sh && \
     sh install.sh --unattended && \
     rm install.sh
-
+    
+USER codespace
 # Install Julia packages
 RUN julia -e 'using Pkg; Pkg.add(["LaMEM", "GeophysicalModelGenerator", "Plots", "PolygonOps"])'
 
