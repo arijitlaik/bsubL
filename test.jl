@@ -17,7 +17,7 @@ CharUnits = GEO_units(length=modelHeight, stress=K_tau, viscosity=refViscosity)
 
 modelHeight = modelHeight.val
 
-resFactor = 2.0
+resFactor = 1.0
 
 model = Model(
     Grid(
