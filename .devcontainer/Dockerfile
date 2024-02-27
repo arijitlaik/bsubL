@@ -2,7 +2,7 @@
 FROM julia:latest
 
 # Install necessary packages
-RUN apt-get update && apt-get install -y git sudo zsh curl rsync wget rclone htop
+RUN apt-get update && apt-get install -y git sudo zsh curl rsync wget rclone htop git-lfs
 
 # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
 RUN useradd -m codespace && \
@@ -14,7 +14,7 @@ RUN useradd -m codespace && \
     
 USER codespace
 # Install Julia packages
-RUN julia -e 'using Pkg; Pkg.add(["LaMEM", "GeophysicalModelGenerator", "Plots", "PolygonOps"])'
+RUN julia -e 'using Pkg; Pkg.add(["LaMEM", "GeophysicalModelGenerator", "Plots", "PolygonOps", "GEOPArams"])'
 
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
