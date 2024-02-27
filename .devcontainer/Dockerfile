@@ -2,7 +2,7 @@
 FROM julia:latest
 
 # Install necessary packages
-RUN apt-get update && apt-get install -y git sudo zsh curl
+RUN apt-get update && apt-get install -y git sudo zsh curl rsync wget rclone htop
 
 # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
 RUN useradd -m codespace && \
@@ -11,11 +11,6 @@ RUN useradd -m codespace && \
     chmod 0440 /etc/sudoers.d/codespace && \
     usermod --shell /bin/bash codespace
 
-# Install Oh My Zsh for a better terminal experience
-RUN curl -Lo install.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh && \
-    chmod +x install.sh && \
-    sh install.sh --unattended && \
-    rm install.sh
     
 USER codespace
 # Install Julia packages
