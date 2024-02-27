@@ -1,0 +1,8 @@
+// devcontainer.json
+{
+    "name": "Julia Dev Container",
+    "dockerFile": "Dockerfile",
+    "forwardPorts": [8888],
+    "postCreateCommand": "julia -e 'using Pkg; Pkg.precompile()'",
+    "extensions": ["julialang.language-julia"]
+}
