@@ -9,5 +9,8 @@
 	<DataSet timestep="4.868518e-01" file="Timestep_00000040_4.86851811e-01/output.pvtr"/>
 	<DataSet timestep="9.928423e-01" file="Timestep_00000050_9.92842294e-01/output.pvtr"/>
 	<DataSet timestep="1.451853e+00" file="Timestep_00000060_1.45185336e+00/output.pvtr"/>
+	<DataSet timestep="1.896636e+00" file="Timestep_00000070_1.89663582e+00/output.pvtr"/>
+	<DataSet timestep="2.350694e+00" file="Timestep_00000080_2.35069373e+00/output.pvtr"/>
+	<DataSet timestep="2.733557e+00" file="Timestep_00000090_2.73355675e+00/output.pvtr"/>
 </Collection>
 </VTKFile>
