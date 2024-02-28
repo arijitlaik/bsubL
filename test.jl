@@ -17,7 +17,7 @@ CharUnits = GEO_units(length=modelHeight, stress=K_tau, viscosity=refViscosity)
 
 modelHeight = modelHeight.val
 
-resFactor = 2
+resFactor = 2.0
 
 model = Model(
     Grid(
@@ -38,10 +38,10 @@ model = Model(
 )
 
 refViscosity = refViscosity.val
-opViscFactor = 2.0
+opViscFactor = 1.0
 modelMaterials = [
     # Phase(ID=0, Name="UpperMantle", eta=refViscosity, rho=3200.0),
-    Phase(ID=0, Name="UpperMantle", eta=refViscosity, eta0=refViscosity, n=3.5, e0=2.5e-15, rho=3200.0),#eta_st=0.1*refViscosity),
+    Phase(ID=0, Name="UpperMantle", eta=refViscosity, eta0=refViscosity, n=3.5, e0=2.5e-15, rho=3200.0,eta_st=0.1*refViscosity,eta_vp=0.1*refViscosity),
     Phase(ID=1, Name="UppperCrustIndoAustralianPlate", eta=1e3 * refViscosity, rho=3280.0, ch=6e6), #,eta_st=0.1*refViscosity,eta_vp=0.1*refViscosity),
     Phase(ID=2, Name="LowerCrustIndoAustralianPlate", eta=1e3 * refViscosity, rho=3280.0, ch=50e6),
     Phase(ID=3, Name="LithosphericMantleCrustIndoAustralianPlate", eta=1e3 * refViscosity, rho=3280.0, ch=350e6),
