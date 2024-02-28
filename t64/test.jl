@@ -17,7 +17,7 @@ CharUnits = GEO_units(length=modelHeight, stress=K_tau, viscosity=refViscosity)
 
 modelHeight = modelHeight.val
 
-resFactor = 1.0
+resFactor = 2.0
 
 model = Model(
     Grid(
@@ -140,4 +140,4 @@ model.Time = Time(time_end=2000.0,
     nstep_max=400,
     nstep_out=10
 )
-run_lamem(model, 64)
+run_lamem(model, 10)
